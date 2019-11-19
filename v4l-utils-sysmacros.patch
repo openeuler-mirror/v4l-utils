@@ -1,0 +1,22 @@
+--- v4l-utils-1.14.2/lib/libv4lconvert/control/libv4lcontrol.c.orig	2018-04-29 18:42:05.534170391 +0100
++++ v4l-utils-1.14.2/lib/libv4lconvert/control/libv4lcontrol.c	2018-04-29 18:42:17.765044988 +0100
+@@ -20,9 +20,7 @@
+  */
+ 
+ #include <sys/types.h>
+-#if defined(MAJOR_IN_SYSMACROS)
+ #include <sys/sysmacros.h>
+-#endif
+ #include <sys/mman.h>
+ #include <fcntl.h>
+ #include <sys/stat.h>
+--- v4l-utils-1.14.2/utils/v4l2-ctl/v4l2-ctl.cpp.orig	2018-04-29 18:49:34.091977421 +0100
++++ v4l-utils-1.14.2/utils/v4l2-ctl/v4l2-ctl.cpp	2018-04-29 18:50:11.588702105 +0100
+@@ -27,6 +27,7 @@
+ #include <inttypes.h>
+ #include <getopt.h>
+ #include <sys/types.h>
++#include <sys/sysmacros.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <ctype.h>
