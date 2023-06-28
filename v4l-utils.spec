@@ -1,12 +1,13 @@
 Name:           v4l-utils
 Version:        1.14.2
-Release:        6
+Release:        7
 Summary:        Linux utilities and libraries to handle media devices
 License:        GPLv2+ and GPLv2
 URL:            http://www.linuxtv.org/downloads/v4l-utils/
 Source0:        http://linuxtv.org/downloads/v4l-utils/v4l-utils-%{version}.tar.bz2
 Patch0000:      v4l-utils-sysmacros.patch
 Patch0001:      0001-fix-compilation-failed.patch
+Patch0002:      0002-fix-clang.patch
 
 BuildRequires:  alsa-lib-devel desktop-file-utils doxygen gettext
 BuildRequires:  kernel-headers libjpeg-devel qt5-qtbase-devel systemd-devel
@@ -157,6 +158,9 @@ mv lib/libdvbv5/README lib/libdvbv5/README.libdvbv5
 %{_mandir}/man3/*.3*
 
 %changelog
+* Wed Jun 28 2023 yoo <sunyuechi@iscas.ac.cn> - 1.14.2-7
+- fix clang build error
+
 * Mon Aug 2 2021 Haiwei Li <lihaiwei8@huawei.com> - 1.14.2-6
 - Fix complication failed due to gcc upgrade
 
